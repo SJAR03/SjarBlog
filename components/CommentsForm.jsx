@@ -45,7 +45,7 @@ const CommentsForm = ({ slug }) => {
 
       setTimeout(() => {
         setShowSuccessMessage(false);
-      }, 3000);
+      }, 4000);
     })
 
   }
@@ -82,15 +82,13 @@ const CommentsForm = ({ slug }) => {
           </div>
         </div>
         {error && <p className="text-xs text-red-500">All fields are mandatory</p>}
-        <div className='mt-8'>
-          <button 
-              type='button'  
-              onClick={handleCommentSubmission}
-              className='transition duration-500 ease hover:bg-indigo-900 inline-block bg-cyan-600 text-lg rounded-full text-white px-8 py-3 cursor-pointer'>
-              PostComment
-          </button>
-          {showSuccessMessage && <span className='text-xl float-right font-semibold mt-3 text-green-500'>Comment submitted for review</span>}
-        </div>
+        <div className="mt-8">
+        <button 
+            type="button" 
+            onClick={handleCommentSubmission} 
+            className="transition duration-500 ease hover:bg-indigo-900 inline-block bg-cyan-600 text-lg rounded-full text-white px-8 py-3 cursor-pointer">Post Comment</button>
+            {showSuccessMessage && <span className="text-xl float-right font-semibold mt-3 text-green-500">Comment submitted for review</span>}
+      </div>
     </div>
   )
 }
