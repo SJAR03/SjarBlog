@@ -32,7 +32,7 @@ const PostDetail = ({ post }) => {
         return <h4 key={index} className="text-md font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
       case 'image':
         return (
-          <Image
+          <img
             key={index}
             alt={obj.title}
             height={obj.height}
@@ -48,7 +48,7 @@ const PostDetail = ({ post }) => {
   return (
     <div className='bg-white shadow-lg rounded-lg lg:p-8 pb-12 mb-8'>
         <div className='relative overflow-hidden shadow-md mb-6'>
-          <Image
+          <img
               src={post.featuredImage.url}
               alt={post.title}
               className='object-top h-full w-full rounded-t-lg'
@@ -57,12 +57,12 @@ const PostDetail = ({ post }) => {
         <div className='px-4 lg:px-0'>
           <div className='flex items-center mb-8 w-1/2 sm:w-1/2 lg:w-1/2'>
             <div className='flex items-center mb-4 lg:mb-0 w-full lg:w-auto mr-8'>
-                <Image
-            alt={post.author.name}
-            height = "40px"
-            width="40px"
-            className="align-middle rounded-full"
-            src={post.author.photo.url}
+                <img
+                    alt={post.author.name}
+                    height = "40px"
+                    width="40px"
+                    className="align-middle rounded-full"
+                    src={post.author.photo.url}
                 />
                 <p className='inline align-middle text-gray-700 ml-2 text-lg'>{post.author.name}</p>
             </div>
